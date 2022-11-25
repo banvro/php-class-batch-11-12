@@ -81,6 +81,13 @@ route::post("loginformsubmitt", "App\Http\Controllers\user@loginformsubmitt");
 
 
 
+route::get("select", "App\Http\Controllers\dbtest@select");
+route::get("insert", "App\Http\Controllers\dbtest@insert");
+route::get("update", "App\Http\Controllers\dbtest@update");
+route::get("delete", "App\Http\Controllers\dbtest@delete");
+
+
+
 
 
 
