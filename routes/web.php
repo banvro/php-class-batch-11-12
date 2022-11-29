@@ -41,7 +41,7 @@ Route::view('tempx', 'temp1');
 Route::view('tempy', 'temp2');
 
 
-Route::view('form', 'form');
+// Route::view('form', 'form');
 Route::post('thisisaction', 'App\Http\Controllers\form@thisismyform');
 
 
@@ -62,11 +62,11 @@ Route::view('denide', 'denide');
 Route::group(['middleware' => ['usercheck']], function(){
     Route::view('news1', 'hello.news1');
     Route::view('news2', 'hello.news2');
-
+ 
 });
 
 
-
+Route::view("form", "form")->middleware('hlloo');
 
 
 // Sessions :::::::::::::::-------:
@@ -89,7 +89,22 @@ route::get("delete", "App\Http\Controllers\dbtest@delete");
 
 
 
+route::get("heyogin", "App\Http\Controllers\heylogin@index");
+route::view("notauth", "notaccess");
 
+
+
+
+
+// Route::group(['middleware' => ['hellologin']], function(){
+//     Route::view('news1', 'hello.news1');
+//     Route::view('news2', 'hello.news2');
+
+// });
+
+
+Route::get("selectdata", 'App\Http\Controllers\heyhlo@selectdata');
+Route::get("hlouser", 'App\Http\Controllers\userprofile@hlouser');
 
 
 
