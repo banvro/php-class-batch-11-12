@@ -96,7 +96,7 @@ route::view("notauth", "notaccess");
 
 
 
-// Route::group(['middleware' => ['hellologin']], function(){
+// Route::group(['middleware' => ['usercheck']], function(){
 //     Route::view('news1', 'hello.news1');
 //     Route::view('news2', 'hello.news2');
 
@@ -105,6 +105,9 @@ route::view("notauth", "notaccess");
 
 Route::get("selectdata", 'App\Http\Controllers\heyhlo@selectdata');
 Route::get("hlouser", 'App\Http\Controllers\userprofile@hlouser');
+Route::get("addnewdata", 'App\Http\Controllers\userprofile@insertusingmodel');
+Route::get("updateusingmodel", 'App\Http\Controllers\userprofile@updateusingmodel');
+Route::get("deletusingmodel", 'App\Http\Controllers\userprofile@deletusingmodel');
 
 
 

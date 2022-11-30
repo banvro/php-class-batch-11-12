@@ -16,15 +16,15 @@ class Usercheck
      */
     public function handle(Request $request, Closure $next)
     {
-        // if($request->balance>3000){
-        //     return redirect('denide');
-        // }
+        if($request->balance>3000){
+            return redirect('denide');
+        }
         
 
-        if(!$request->session()->has('token')){
-            $request->session()->flash('error','Access Denide..! Please Enter Valid Email or Password');
-            return redirect('login');
-        }
+        // if(!$request->session()->has('token')){
+        //     $request->session()->flash('error','Access Denide..! Please Enter Valid Email or Password');
+        //     return redirect('login');
+        // }
         return $next($request);
     }
 }

@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class proflile extends Model
 {
     protected $table='userk';
-    
+
+    public $timestemps=false;
+     
     use HasFactory;
 }
